@@ -1,5 +1,8 @@
 == README
 
+9/22 - Initialized repository and updated the read me file; gemfile created minus the production group; may encounter error in the future with the pg gem
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
