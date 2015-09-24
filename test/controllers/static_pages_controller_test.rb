@@ -1,6 +1,6 @@
 require 'test_helper'
 
-def setup
+ def setup
     @base_title = "Ruby on Rails Blog"
  end
 
@@ -21,6 +21,12 @@ class StaticPagesControllerTest < ActionController::TestCase
   	get :about
   	assert_response :success
   	assert_select "title", "About | Ruby on Rails Blog"
+  end
+
+  test "should get contact" do
+    get :contact
+    assert_response :success
+    assert_select "title", "Contact | Ruby on Rails Blog"
   end
 
 end
