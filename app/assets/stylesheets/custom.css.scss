@@ -1,7 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$light-gray: #777;
+$red: rgb(190, 30, 45);
+$orange: rgb(247, 147, 29);
+$yellow: rgb(255, 242, 0);
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -13,6 +17,7 @@ $light-gray: #777;
 
 body {
   padding-top: 60px;
+  background-color: $orange;
 }
 
 section {
@@ -34,6 +39,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: $orange;
 }
 
 h1 {
@@ -49,7 +55,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $light-gray;
+  color: $orange;
 }
 
 p {
@@ -58,6 +64,10 @@ p {
 }
 
 /* header */
+
+.navbar {
+  background-color: $black;
+}
 
 #logo {
   float: left;
@@ -69,7 +79,7 @@ p {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: #fff;
+    color: $orange;
     text-decoration: none;
   }
 }
@@ -80,9 +90,9 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: $light-gray;
+  color: $red;
   a {
-    color: #555;
+    color: #red;
     &:hover {
       color: #222;
     }
@@ -165,18 +175,20 @@ input {
   }
 }
 
-.checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
   }
 }
 
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
+.user_info h1 {
+  color: $white;
 }
 
 /* miscellaneous */
