@@ -13,11 +13,14 @@ $white: rgb(255, 255, 255);
   box-sizing:         border-box;
 }
 
-/* universal */
+/* ======================
+--------universal--------
+========================= */
 
 body {
   padding-top: 60px;
   background-color: $orange;
+  font-family: 'Shadows Into Light Two', cursive;
 }
 
 section {
@@ -35,11 +38,36 @@ textarea {
   }
 }
 
-/* typography */
+.jumbotron {
+  background-color: $orange;
+  border-color: $yellow;
+}
+
+.jumbotron h2 {
+  font-family: 'Architects Daughter', cursive;
+  color: $black;
+  font-size: 2em;
+  padding-top: 12px;
+}
+
+.btn {
+  background-color: $red;
+  border-color: $black;
+}
+
+.btn:hover {
+  background-color: $yellow;
+  color: $red;
+  border-color: $white;
+}
+
+/* ======================
+--------typography--------
+========================= */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  color: $orange;
+  color: $red;
 }
 
 h1 {
@@ -63,54 +91,50 @@ p {
   line-height: 1.7em;
 }
 
-/* header */
+/* ======================
+----------HEADER----------
+========================= */
 
 .navbar {
-  background-color: $black;
+  background-color: $red;
 }
 
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: $orange;
-    text-decoration: none;
-  }
+  padding: 9px;
 }
 
-/* footer */
+.navbar-inverse .navbar-nav {
+  padding-top: 14px;
+}
+
+.navbar-inverse .navbar-nav > li {
+  font-size: 1.5em;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: $orange;
+}
+
+/* ======================
+-------- FOOTER ----------
+========================= */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid $black;
   color: $red;
-  a {
-    color: #red;
-    &:hover {
-      color: #222;
-    }
-  }
   small {
     float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
+    padding-left: 40px;
   }
 }
 
-/* sidebar */
+/* ======================
+-------- SIDEBAR --------
+========================= */
 
 aside {
   section.user_info {
@@ -145,15 +169,15 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
-    color: gray;
+    border-left: 1px solid $black;
+    color: $red;
     &:first-child {
       padding-left: 0;
       border: 0;
     }
     &:hover {
       text-decoration: none;
-      color: blue;
+      color: $white;
     }
   }
   strong {
@@ -165,7 +189,9 @@ aside {
   padding: 0;
 }
 
-/* forms */
+/* =======================
+--------- FORMS ----------
+========================= */
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
@@ -193,15 +219,38 @@ input {
   }
 }
 
-/* Users index */
+.signin_form {
+  width: 200px;
+}
+
+p a {
+  color: $white;
+}
+
+p a:hover {
+  text-decoration: none;
+  color: $red;
+}
+
+/* =========================
+-------- USERS INDEX --------
+============================ */
 
 .users {
+  width: 40%;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   li {
     overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
+    border-bottom: 1px dotted $white;
+    a {
+      color: $red;
+    }
+    a:hover {
+      color: $white;
+      text-decoration: none;
+    }
   }
 }
 
@@ -209,14 +258,38 @@ input {
   color: $white;
 }
 
-/* microposts */
+.user_info span a {
+  color: $red;
+}
+
+.user_info span a:hover {
+  color: $white;
+}
+
+/* ========================
+-------- MICROPOSTS --------
+=========================== */
+
+#micropost .user a {
+  color: $red;
+  font-size: 1.4em;
+}
+
+#micropost .user a:hover {
+  color: $white;
+  text-decoration: none;
+}
+
+.content {
+  font-size: 1.3em;
+}
 
 .microposts {
   list-style: none;
   padding: 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid $black;
   }
   .user {
     margin-top: 5em;
@@ -231,15 +304,15 @@ input {
     }
   }
   .timestamp {
-    color: $gray-light;
+    color: $white;
     display: block;
     margin-left: 60px;
   }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
+
+  .timestamp a {
+    color: $red;
   }
+
 }
 
 aside {
@@ -256,12 +329,19 @@ span.picture {
   }
 }
 
-/* miscellaneous */
+/* ======================
+---------- MISC. --------
+========================= */
 
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
+// .debug_dump {
+//   clear: both;
+//   float: left;
+//   width: 100%;
+//   margin-top: 45px;
+//   @include box_sizing;
+// }
+
+/* ========================
+------ MEDIA QUERIES ------
+========================= */
+
