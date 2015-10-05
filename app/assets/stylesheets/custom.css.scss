@@ -61,6 +61,11 @@ textarea {
   border-color: $white;
 }
 
+.alert {
+  width: 40%;
+  margin: 0 auto;
+}
+
 /* ======================
 --------typography--------
 ========================= */
@@ -102,7 +107,13 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  padding: 9px;
+  padding: 3px;
+  margin: 8px;
+}
+
+#logo:hover {
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 50px;
 }
 
 .navbar-inverse .navbar-nav {
