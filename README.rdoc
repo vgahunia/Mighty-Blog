@@ -4,4 +4,4 @@ This Rails blog was one of the larger projects in the Web Intensive course.
 
 This is a full-on app with professional-grade user authentication, password encryption, full implementation of CRUD and complete blogging and following functionalities.
 
-I definitely received help along the way via NYCDA slides, class notes and such books/guides as Michael Hartl's Ruby on Rails Tutorial and Rails 4 Way.
+I availed help along the way via NYCDA slides, class notes and such books/guides as Michael Hartl's Ruby on Rails Tutorial and Rails 4 Way.
